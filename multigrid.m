@@ -21,8 +21,8 @@ if  nargin<10
 end
 
      res = zeros(maxit,1);
-weight=1;
-     for ii=1:maxit
+     weight=1; % weighted Jacobi method
+     fo r ii=1:maxit
          % presmoothing
          if smooth==1
              x=weightJacobimethod(A,b,x,weight,pre);

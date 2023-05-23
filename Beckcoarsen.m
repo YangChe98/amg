@@ -1,4 +1,4 @@
-function Ac=Beckcoarsen(A);
+function [P,R]=Beckcoarsen(A);
 [m,n]=size(A);
 C=[];
 F=[];
@@ -25,6 +25,6 @@ Clength=length(C);
 P=sparse(n,Clength);
 P(F,:)=P_F_C;
 P(C,:)=speye(Clength);
-Ac=P.'*A*P;
+R=P.';
 
         
